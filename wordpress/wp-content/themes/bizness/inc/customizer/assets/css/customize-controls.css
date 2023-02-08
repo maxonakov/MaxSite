@@ -1,0 +1,256 @@
+/*!
+ Project   : Elan Pro WordPress Theme
+ Purpose   : Widget and Customizer Area CSS
+ Author    : precisethemes
+ Theme URI : https://precisethemes.com/
+ */
+
+
+:root {
+	--color-accent-1: #FCCE00;
+	--color-accent-2: #D4B212;
+
+	--color-heading: #223148;
+
+	--color-1: #555968;
+	--color-2: #6d707d;
+	--color-3: #9ea0a8;
+	--color-4: #cecfd4;
+	--color-5: #ffffff;
+
+	--color-bg: #ffffff;
+	--color-bg-2: #354255;
+	--color-bg-4: #F1F4F9;
+
+}
+
+.customize-control {
+	margin-bottom: 24px;
+}
+
+.customize-control.bizness-hidden,
+.description.bizness-hidden {
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	overflow: hidden;
+	-webkit-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.description.bizness-hidden {
+	margin-top: -8px !important;
+	margin-bottom: 8px !important;
+}
+
+.description.bizness-hidden {
+	margin-top: -8px !important;
+}
+
+/* Meta Separator Image
+----------------------------------*/
+li[id$="_meta_separator"] .image label {
+	width: 32px !important;
+}
+
+/*--------------------------------------------------------------
+# Group Fields
+--------------------------------------------------------------*/
+.customize-control-group-field {
+	display: list-item !important;
+}
+
+.group-field-tabs-wrap {
+	border-bottom: 1px solid #ddd;
+	width: calc(100% + 28px);
+	margin: -15px 0 0 -12px;
+	table-layout: fixed;
+	display: table;
+}
+
+.group-field-tabs-wrap .group-field-tab {
+	border-right: 1px solid #ddd;
+	display: table-cell;
+	text-align: center;
+	width: 100%;
+}
+
+.group-field-tabs-wrap .group-field-tab:last-child {
+	border-right: none;
+}
+
+.group-field-tabs-wrap .group-field-tab label {
+	text-transform: capitalize;
+	background: #fff;
+	-webkit-box-shadow: inset 0 0 0 0 #0085ba;
+	box-shadow: inset 0 0 0 0 #0085ba;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-decoration: none;
+	font-weight: 600;
+	color: #333;
+}
+
+.group-field-tabs-wrap .group-field-tab label i {
+	color: #333;
+	margin-right: 4px;
+}
+
+.group-field-tabs-wrap .group-field-tab label:hover {
+	color: #0085ba;
+	background: #f3f3f5;
+}
+
+.group-field-tabs-wrap .group-field-tab label:hover i {
+	color: #333;
+}
+
+.group-field-tabs-wrap .group-field-tab .active~label {
+	-webkit-box-shadow: inset 0 0 0 0 #0085ba;
+	box-shadow: inset 0 0 0 0 #0085ba;
+	color: #0085ba;
+	background-color: #f3f3f5;
+}
+
+.group-field-tabs-wrap input[type="radio"] {
+	display: none !important;
+}
+
+.group-field-tabs-wrap .group-field-tab {
+	padding-bottom: 20px;
+}
+
+.group-field-tabs-wrap .group-field-tab label {
+	position: relative;
+	padding: 24px 0;
+}
+
+.group-field-tabs-wrap .group-field-tab label::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: auto 24px;
+	background-position: center;
+
+}
+
+.group-field-tabs-wrap .group-field-tab.desktop label::before {
+	background-image: url("../images/desktop-icon.svg");
+	background-size: 24px auto;
+}
+
+.group-field-tabs-wrap .group-field-tab.tablet label::before {
+	background-image: url("../images/tablet-icon.svg");
+	background-size: 24px auto;
+}
+
+.group-field-tabs-wrap .group-field-tab.mobile label::before {
+	background-image: url("../images/phone-icon.svg");
+	background-size: 24px auto;
+}
+
+.interface-tab-label {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	width: 100%;
+	height: 22px;
+	border-bottom: 2px solid transparent;
+	font-size: 10px;
+	letter-spacing: 0.05em;
+	color: #808080;
+	text-align: center;
+	background: #fff;
+	-webkit-transition: all .35s;
+	-o-transition: all .35s;
+	transition: all .35s;
+}
+
+.group-field-tabs-wrap .group-field-tab:hover .interface-tab-label {
+	background: #f3f3f5;
+}
+
+.group-field-tabs-wrap .group-field-tab .active~label .interface-tab-label {
+	border-color: #0085ba;
+	background: #f3f3f5;
+}
+
+/*--------------------------------------------------------------
+# Custom Control
+--------------------------------------------------------------*/
+.customize-controls-wrap,
+.background-wrapper {
+	padding: 12px 16px 4px;
+	/*margin-top: 6px;*/
+	border: 1px solid #dbdcdf;
+	border-radius: 3px;
+	background-color: #f5f6f6;
+
+}
+
+.customize-control-box-shadow .customize-controls-wrap {
+	height: 330px;
+}
+
+.customize-controls-wrap .customize-control-kirki-slider .wrapper {
+	padding: 0;
+}
+
+.customize-control-kirki-background h4 {
+	margin: 0.33em 0;
+}
+
+.customize-control-border .customize-controls-wrap {
+	height: 360px;
+}
+
+.customize-control-kirki-radio-image img {
+	width: 96px;
+}
+
+#customize-controls .customize-pane-child .accordion-section.control-section-kirki-expanded h3 {
+	font-size: 14px;
+	padding: 10px 10px 11px 14px;
+	line-height: 1.55;
+	font-weight: 400;
+}
+
+#accordion-section-upgrade-pro {
+	padding: 10px 10px 11px 14px !important;
+	background: #fff;
+}
+
+#accordion-section-upgrade-pro h5 {
+	margin: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	font-size: 15px;
+	color: #50575e;
+	gap: 2px 7px;
+}
+
+#accordion-section-upgrade-pro h5 .button-primary {
+	font-size: 14px;
+	padding-bottom: 1px;
+}
