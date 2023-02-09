@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 a538a23e9123c57864e4f6d6f19d459a23b21e9c Keanan Koppenhaver <keanan@alphaparticle.com> 1642432620 -0600	clone: from github.com:usebranch/wppusher-plugin.git
-a538a23e9123c57864e4f6d6f19d459a23b21e9c ec5b90f82e8ef57420e6f1d64714433870a2b3e5 Keanan Koppenhaver <keanan@alphaparticle.com> 1642437269 -0600	pull origin master: Fast-forward
-ec5b90f82e8ef57420e6f1d64714433870a2b3e5 4d9e82f0e2e1326c428212d7a7f255594ceb9404 Keanan Koppenhaver <keanan@alphaparticle.com> 1642437285 -0600	commit: 3.0.9
-4d9e82f0e2e1326c428212d7a7f255594ceb9404 aed392488dd0a5376071526a3826a78c9b9e7a22 Keanan Koppenhaver <keanan@alphaparticle.com> 1642445914 -0600	commit: Version bump
-aed392488dd0a5376071526a3826a78c9b9e7a22 01f1f1c2288951f1c860865731c27397ecdf28e5 Keanan Koppenhaver <keanan@alphaparticle.com> 1642447301 -0600	commit: 3.0.11
-01f1f1c2288951f1c860865731c27397ecdf28e5 12abab4c1071534d93847d5631b28a64307a79ac Keanan Koppenhaver <keanan@alphaparticle.com> 1643012301 -0600	pull origin master: Fast-forward
-12abab4c1071534d93847d5631b28a64307a79ac 6391090e42c154d1b40aeb497cab091760f39dfe Keanan Koppenhaver <keanan@alphaparticle.com> 1643948198 -0600	commit: Adding cURL information to the troubleshooting tab
-6391090e42c154d1b40aeb497cab091760f39dfe b9bfda56ba7bcaab5f8d6ac0e1d18a6666de1ea4 Keanan Koppenhaver <keanan@alphaparticle.com> 1643949926 -0600	commit: Fix welcome banner for WP 5.9
-b9bfda56ba7bcaab5f8d6ac0e1d18a6666de1ea4 6608ffef25b9f7b6ed376b647aa04c261deab665 Keanan Koppenhaver <keanan@alphaparticle.com> 1643950423 -0600	commit: Version bump for 3.0.13
