@@ -206,7 +206,7 @@ class Woolentor_Backorder extends WC_Product{
 
         }
 
-        return $quantity;
+        return $cart_item_data;
     }
 
     /**

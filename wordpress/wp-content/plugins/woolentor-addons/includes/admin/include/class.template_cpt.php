@@ -75,7 +75,7 @@ class Woolentor_Template_CPT{
 			'label'               => esc_html__('Template Builder', 'woolentor'),
 			'description'         => esc_html__('WooLentor Template', 'woolentor'),
 			'labels'              => $labels,
-			'supports'            => array('title', 'editor', 'elementor', 'author', 'permalink'),
+			'supports'            => array('title', 'editor', 'elementor', 'author', 'permalink', 'custom-fields'),
 			'hierarchical'        => false,
 			'public'              => true,
 			'show_ui'             => true,
@@ -121,7 +121,7 @@ class Woolentor_Template_CPT{
 	public function register_post_meta_field() {
 
 		// Get Default Value from Global Option
-		$default_width = (int)woolentor_get_option( 'container_width', 'woolentor_gutenberg_tabs', 1140 );
+		$default_width = function_exists( 'woolentor_get_option' ) ? (int)woolentor_get_option( 'container_width', 'woolentor_gutenberg_tabs', 1140 ) : 1140;
 
 		// Meta Field for Container Width
 		register_post_meta( self::CPTTYPE, '_woolentor_container_width',

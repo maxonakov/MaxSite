@@ -114,7 +114,8 @@ class Scripts {
 			'templateType'	=> $this->get_block_list()['template_type'],
 			'sampledata'	=> is_admin() ? Sample_Data::instance()->get_sample_data( false, 'sampledata/product' ) : array(),
 			'prostatus'		=> is_admin() ? is_plugin_active('woolentor-addons-pro/woolentor_addons_pro.php') : false,
-			'prolink'		=> 'https://woolentor.com/pricing/'
+			'templatelist'	=> is_admin() ? \Woolentor_Template_Library_Manager::get_gutenberg_templates_info() : array(),
+			'prolink'		=> 'https://woolentor.com/pricing/',
 		);
 
 		// My Account MenuList

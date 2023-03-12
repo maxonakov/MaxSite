@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) exit;
 
 use MailPoet\Newsletter\Renderer\EscapeHelper as EHelper;
 use MailPoet\Newsletter\Renderer\StylesHelper;
+use MailPoet\NewsletterProcessingException;
 use MailPoet\WooCommerce\Helper;
 
 class Coupon {
@@ -26,7 +27,18 @@ class Coupon {
   public function render($element, $columnBaseWidth) {
     $couponCode = self::CODE_PLACEHOLDER;
     if (!empty($element['couponId'])) {
-      $couponCode = $this->helper->wcGetCouponCodeById((int)$element['couponId']);
+      try {
+        $couponCode = $this->helper->wcGetCouponCodeById((int)$element['couponId']);
+      } catch (\Exception $e) {
+        if (!$this->helper->isWooCommerceActive()) {
+          throw NewsletterProcessingException::create()->withMessage(__('WooCommerce is not active', 'mailpoet'));
+        } else {
+          throw NewsletterProcessingException::create()->withMessage($e->getMessage())->withCode($e->getCode());
+        }
+      }
+      if (empty($couponCode)) {
+        throw NewsletterProcessingException::create()->withMessage(__('Couldn\'t find coupon, please edit and adjust if coupons is removed.', 'mailpoet'));
+      }
     }
     $element['styles']['block']['width'] = $this->calculateWidth($element, $columnBaseWidth);
     $styles = 'display:inline-block;-webkit-text-size-adjust:none;mso-hide:all;text-decoration:none;text-align:center;' . StylesHelper::getBlockStyles($element, $exclude = ['textAlign']);
@@ -50,12 +62,12 @@ class Coupon {
                   <center style="color:' . EHelper::escapeHtmlStyleAttr($element['styles']['block']['fontColor']) . ';
                     font-family:' . EHelper::escapeHtmlStyleAttr($element['styles']['block']['fontFamily']) . ';
                     font-size:' . EHelper::escapeHtmlStyleAttr($element['styles']['block']['fontSize']) . ';
-                    font-weight:bold;">' . EHelper::escapeHtmlText($element['code']) . '
+                    font-weight:bold;">' . EHelper::escapeHtmlText($couponCode) . '
                   </center>
                   </v:roundrect>
                   <![endif]-->
                   <!--[if !mso]><!-- -->
-                  <div class="mailpoet_coupon" style="' . $styles . '"> ' . EHelper::escapeHtmlText($couponCode) . '</div>
+                  <div class="mailpoet_coupon" style="' . $styles . '">' . EHelper::escapeHtmlText($couponCode) . '</div>
                   <!--<![endif]-->
                 </td>
               </tr>

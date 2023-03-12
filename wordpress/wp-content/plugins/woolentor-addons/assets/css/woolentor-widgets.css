@@ -3670,6 +3670,14 @@ span.woolentor-order-item-title .product-thumbnail{
   .wl-addto-cart.wl-style-5 form.cart .wl-cart-wrap.both .wishlist{
     order: 1;
   }
+  .wl-addto-cart.wl-style-2 form.cart .wl-cart-wrap.both a.wishlist,
+  .wl-addto-cart.wl-style-5 form.cart .wl-cart-wrap.both a.wishlist,
+  .wl-addto-cart.wl-style-2 form.cart .wl-cart-wrap.both a.woolentor-compare,
+  .wl-addto-cart.wl-style-5 form.cart .wl-cart-wrap.both a.woolentor-compare {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+  }
 
   .wl-addto-cart.wl-style-2 form.cart .wl-cart-wrap.both .compare,
   .wl-addto-cart.wl-style-5 form.cart .wl-cart-wrap.both .compare{

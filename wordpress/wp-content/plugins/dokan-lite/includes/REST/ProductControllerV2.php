@@ -51,7 +51,7 @@ class ProductControllerV2 extends ProductController {
                     'callback'            => [ $this, 'get_product_filter_by_data' ],
                     'permission_callback' => [ $this, 'get_product_permissions_check' ],
                 ],
-                'schema' => $this->get_filter_data_schema(),
+                'schema' => [ $this, 'get_filter_data_schema' ],
             ]
         );
     }
@@ -166,7 +166,6 @@ class ProductControllerV2 extends ProductController {
                 'posts_per_page' => 10,
                 'paged'          => 1,
                 'author'         => dokan_get_current_user_id(),
-                'post_status'    => $this->post_status,
                 'orderby'        => 'post_date',
                 'post_type'      => 'product',
                 'date_query'     => [],

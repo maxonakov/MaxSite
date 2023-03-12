@@ -233,7 +233,7 @@ class Woolentor_Wb_Product_Add_To_Cart_Widget extends Widget_Base {
                     $this->add_control(
                         'advance_quantity_background_color',
                         [
-                            'label'     => __( 'Quantity Backgeound', 'woolentor' ),
+                            'label'     => __( 'Quantity Background', 'woolentor' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .wl-addto-cart.wl-style-4 form.cart .wl-quantity-wrap .wl-quantity-cal' => 'background: {{VALUE}}',

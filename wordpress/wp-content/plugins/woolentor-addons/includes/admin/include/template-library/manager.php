@@ -9,7 +9,7 @@ class Woolentor_Template_Library_Manager{
     public static $endpoint = 'https://library.shoplentor.com/wp-json/woolentor/v1/templates';
     public static $templateapi = 'https://library.shoplentor.com/wp-json/woolentor/v1/templates/%s';
 
-    public static $endpoint_gutenberg = '';
+    public static $endpoint_gutenberg = 'http://plugindev.test/wp-json/woolentor/v1/gutenbergtemplates';
 
     private static $_instance = null;
     public static function instance(){

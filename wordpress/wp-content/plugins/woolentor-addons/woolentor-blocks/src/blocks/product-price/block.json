@@ -35,6 +35,12 @@
         "selector": "{{WOOLENTOR_WRAPPER}}"
       }
     },
+    "contentAlignment": {
+      "type": "string",
+      "style": {
+        "selector": "{{WOOLENTOR_WRAPPER}} .price { text-align: {{contentAlignment}} !important; }"
+      }
+    },
     "priceColor": {
       "type": "string",
       "style": {

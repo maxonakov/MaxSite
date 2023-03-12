@@ -298,6 +298,9 @@ class Woolentor_Manage_WC_Template{
 
     // Get Template width
     public static function get_template_width( $template_id ){
+        if( ! Woolentor_Template_Manager::instance()->edit_with_gutenberg( $template_id ) ){
+            return '';
+        }
         $get_width = get_post_meta( $template_id, '_woolentor_container_width', true );
 		return $get_width ? $get_width : '';
     }

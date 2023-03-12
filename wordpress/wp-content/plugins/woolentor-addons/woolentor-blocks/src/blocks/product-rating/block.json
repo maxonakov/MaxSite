@@ -66,6 +66,12 @@
       "style": {
         "selector": "{{WOOLENTOR_WRAPPER}} a.woocommerce-review-link{ font-size: {{linkSize}} !important; }"
       }
+    },
+    "contentAlignment": {
+      "type": "string",
+      "style": {
+        "selector": ".woocommerce {{WOOLENTOR_WRAPPER}} .woocommerce-product-rating { text-align: {{contentAlignment}} !important;line-height:1; } .woocommerce {{WOOLENTOR_WRAPPER}} .woocommerce-product-rating .star-rating{ display:inline-block;float:none;margin-top:0;text-align:left }"
+      }
     }
   }
 }

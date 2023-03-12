@@ -86,6 +86,12 @@
       "style": {
         "selector": ".woocommerce {{WOOLENTOR_WRAPPER}} .product_meta{ margin: {{textMargin}}; }"
       }
+    },
+    "contentAlignment": {
+      "type": "string",
+      "style": {
+        "selector": ".woocommerce {{WOOLENTOR_WRAPPER}} .product_meta{ text-align: {{contentAlignment}}; }"
+      }
     }
   }
 }

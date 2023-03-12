@@ -374,15 +374,19 @@ $labels = apply_filters( 'woolentor_slc_labels', $labels );
                     ?>
                 </div>
                 <ul class="woolentor-checkout__breadcrumb">
-                    <li class="woolentor-checkout__breadcrumb-item">
-                        <a class="woolentor-checkout__breadcrumb-link" href="<?php echo esc_url(wc_get_cart_url()) ?>"><?php echo esc_html($labels['cart']) ?></a>
-                    </li>
+                    <?php if(!$hide_cart_nivigation): ?>
+                        <li class="woolentor-checkout__breadcrumb-item">
+                            <a class="woolentor-checkout__breadcrumb-link" href="<?php echo esc_url(wc_get_cart_url()) ?>"><?php echo esc_html($labels['cart']) ?></a>
+                        </li>
+                    <?php endif; ?>
                     <li class="woolentor-checkout__breadcrumb-item active" data-step="step--info">
                         <span class="woolentor-checkout__breadcrumb-text"><?php echo esc_html($labels['information']) ?></span>
                     </li>
+                    <?php if( !$hide_shipping_step ): ?>
                     <li class="woolentor-checkout__breadcrumb-item" data-step="step--shipping">
                         <span class="woolentor-checkout__breadcrumb-text"><?php echo esc_html($labels['shipping']) ?></span>
                     </li>
+                    <?php endif; ?>
                     <li class="woolentor-checkout__breadcrumb-item" data-step="step--payment">
                         <span class="woolentor-checkout__breadcrumb-text"><?php echo esc_html($labels['payment']) ?></span>
                     </li>

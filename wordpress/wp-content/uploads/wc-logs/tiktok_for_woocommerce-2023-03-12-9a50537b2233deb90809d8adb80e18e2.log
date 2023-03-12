@@ -1,0 +1,61 @@
+2023-03-12T07:57:27+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2023-03-12T08:12:28+00:00 DEBUG POST: https://business-api.tiktok.com/open_api/v1.2/tbp/business_profile/disconnect/
+
+{"external_business_id":false,"business_platform":"WOO_COMMERCE","is_setup_page":0,"app_id":false}
+ ajax: no
+2023-03-12T08:12:29+00:00 DEBUG Tt4b_Mapi_Class::mapi_post: Response: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/json; charset=utf-8
+Content-Length: 103
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 202303120812280247B7C78E0F941A5B45
+x-tt-trace-host: 01f6d722e5cde53db8ede1340f410f803a370a74ea4708b3bfe95f6d272b7ae8626ae20fcb59d8a64c87384f1331c95a5ff7c1d88851d404d8076036ab711c37301c7a85fc06b69fcff8eac19c73ce877fa887ee9c7c2a602b27b3b630c3acea570c9a7d85b2947d05508bf9c333b3aabd
+X-Origin-Response-Time: 10,23.44.214.9
+X-Akamai-Request-ID: 6e2016d6.11087075
+Expires: Sun, 12 Mar 2023 08:12:29 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sun, 12 Mar 2023 08:12:29 GMT
+X-Cache: TCP_MISS from a2-20-45-95.deploy.akamaitechnologies.com (AkamaiGHost/11.0.2-47081134) (-)
+Connection: close
+X-Cache-Remote: TCP_MISS from a23-44-214-9.deploy.akamaitechnologies.com (AkamaiGHost/11.0.0-46340752) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=178, origin; dur=10
+Server-Timing: inner; dur=5
+X-Parent-Response-Time: 187,2.20.45.95
+
+{"code":40104,"message":"The access_token is empty.","request_id":"202303120812280247B7C78E0F941A5B45"}
+
+2023-03-12T08:12:29+00:00 DEBUG POST: https://business-api.tiktok.com/tbp/v2.0/shop/connection/disconnect?external_data=
+
+--- EMPTY STRING ---
+ ajax: no
+2023-03-12T08:12:29+00:00 DEBUG Tt4b_Mapi_Class::tts_shop_disconnect: Response: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/json; charset=utf-8
+Content-Length: 95
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 202303120812286FD9DD562CD5AB1A06A8
+x-tt-trace-host: 01f6d722e5cde53db8ede1340f410f803a62c7d6a6daa9d7a2c29fa8c51c64c2bad53b9d4af1b9fd1e3f2d9397d5e6bcbd3b153ee5bcd25bf615d7121d6db2746f7334af677452ce08e3a4469e08471e6338ba54bc81d72bfb83fc89b738fc73a68b90622f42feb00c0e118c2f6a429350
+X-Origin-Response-Time: 18,23.194.187.228
+X-Akamai-Request-ID: e4c1bb3.1108730a
+Expires: Sun, 12 Mar 2023 08:12:29 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sun, 12 Mar 2023 08:12:29 GMT
+X-Cache: TCP_MISS from a2-20-45-95.deploy.akamaitechnologies.com (AkamaiGHost/11.0.2-47081134) (-)
+Connection: close
+X-Cache-Remote: TCP_MISS from a23-194-187-228.deploy.akamaitechnologies.com (AkamaiGHost/11.0.0-46340752) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=187, origin; dur=18
+Server-Timing: inner; dur=14
+X-Parent-Response-Time: 203,2.20.45.95
+
+{"code":40001,"message":"Permission denied.","request_id":"202303120812286FD9DD562CD5AB1A06A8"}
+

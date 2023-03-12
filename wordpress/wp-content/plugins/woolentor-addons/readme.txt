@@ -3,7 +3,7 @@ Contributors: hasthemes, htplugins, devitemsllc, zenaulislam, tarekht, aslamhasi
 Tags: Elementor, WooCommerce, WooCommerce Elementor, WooCommerce Builder, WooCommerce Product, Woo Builder, Variation Swatches, woocommerce blocks, Product Slider, Product Compare, Wishlist, Product Filter
 Requires at least: 4.7
 Tested up to: 6.1
-Stable tag: 2.5.4
+Stable tag: 2.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -1097,6 +1097,25 @@ Feel free to [Contact us](https://hasthemes.com/contact-us/)
 Elementor Pro is not required. But you can use ShopLentor with Elementor free & Pro.
 
 == Changelog ==
+
+= Version: 2.5.6 - Date: 26-02-2023 =
+* Added : Content Alignment option in Product rating block.
+* Added : Price Alignment option in Product Price block.
+* Added : Alignment option in Product stock block.
+* Added : Alignment option in Product Meta block.
+* Solved : Border CSS generate issue in product add to cart block.
+* Solved : CSS Generate issue in editor mode for product tabs block.
+* Solved : Toggle control component style issue in Related product addon.
+* Solved : Cart and Shipping step navigation hide issue for mobile device in Shopify like checkout module.
+
+= Version: 2.5.5 - Date: 04-02-2023 =
+* Added : 4 Style has been added in single product add to cart block.
+* Added : WishList and Compare Button control option added in single product add to cart block.
+* Solved : Template Container Width issue in Elementor Editor.
+* Solved : Template Container width Metabox render issue.
+* Solved : Has been solved missed return value from add to cart filter in backorder module.
+* Solved : PHP Undefined Function issue if WooCommerce is Deactivate.
+* Compatibility : Universal Product Layout compatibility with kadence theme.
 
 = Version: 2.5.4 - Date: 23-01-2023 =
 * Added : Category description showing option has been added in WL Category Grid

@@ -60,7 +60,7 @@ class VideoPress_Player {
 			self::$shown[ $guid ] = 0;
 		}
 
-		self::$shown[ $guid ]++;
+		++self::$shown[ $guid ];
 
 		$this->video_container_id = 'v-' . $guid . '-' . self::$shown[ $guid ];
 		$this->video_id           = $this->video_container_id . '-video';
@@ -332,7 +332,7 @@ class VideoPress_Player {
 		if ( isset( $this->options['autoplay'] ) && $this->options['autoplay'] === true ) {
 			$html .= ' autoplay="true"';
 		} else {
-			$html .= ' preload="metadata"';
+			$html .= ' preload="' . $this->options['preloadContent'] . '"';
 		}
 		if ( isset( $this->video->text_direction ) ) {
 			$html .= ' dir="' . esc_attr( $this->video->text_direction ) . '"';
@@ -678,6 +678,10 @@ class VideoPress_Player {
 						$videopress_options[ $option ] = $value;
 					}
 					break;
+				case 'preloadContent':
+					if ( $value ) {
+						$videopress_options['preloadContent'] = $value;
+					}
 			}
 		}
 

@@ -1066,10 +1066,36 @@ abstract class Publicize_Base {
 				'schema' => array(
 					'type'       => 'object',
 					'properties' => array(
-						'attached_media' => array(
+						'attached_media'           => array(
 							'type'  => 'array',
 							'items' => array(
-								'type' => 'number',
+								'type'       => 'object',
+								'properties' => array(
+									'id'  => array(
+										'type' => 'number',
+									),
+									'url' => array(
+										'type' => 'string',
+									),
+								),
+							),
+						),
+						'image_generator_settings' => array(
+							'type'       => 'object',
+							'properties' => array(
+								'enabled'     => array(
+									'type' => 'boolean',
+								),
+								'custom_text' => array(
+									'type' => 'string',
+								),
+								'image_type'  => array(
+									'type' => 'string',
+								),
+								'image_id'    => array(
+									'type'    => 'number',
+									'default' => 0,
+								),
 							),
 						),
 					),
@@ -1560,6 +1586,22 @@ abstract class Publicize_Base {
 	}
 
 	/**
+	 * Check if the social image generator is enabled.
+	 *
+	 * @param int $blog_id The blog ID for the current blog.
+	 * @return bool
+	 */
+	public function is_social_image_generator_enabled( $blog_id ) {
+		$data = $this->get_api_data( $blog_id );
+
+		if ( empty( $data ) ) {
+			return false;
+		}
+
+		return ! empty( $data['is_social_image_generator_enabled'] );
+	}
+
+	/**
 	 * Call the WPCOM REST API to calculate the scheduled shares.
 	 *
 	 * @param string $blog_id The blog_id.
@@ -1594,6 +1636,8 @@ abstract class Publicize_Base {
 		return $has_paid_plan;
 	}
 }
+
+// phpcs:disable Universal.Files.SeparateFunctionsFromOO.Mixed -- TODO: Move these functions to some other file.
 
 /**
  * Get Calypso URL for Publicize connections.

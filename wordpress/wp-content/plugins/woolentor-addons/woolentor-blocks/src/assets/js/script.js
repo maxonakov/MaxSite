@@ -230,6 +230,52 @@
 
         },
 
+        /**
+         * Single Product Quantity Increase/decrease manager
+         */
+        quantityIncreaseDescrease: function( $area ){
+
+            $area.find('form.cart').on( 'click', 'span.wl-qunatity-plus, span.wl-qunatity-minus', function() {
+                
+                const poductType = $area.data('producttype');
+                // Get current quantity values
+                if('grouped' != poductType){
+                    var qty = $( this ).closest( 'form.cart' ).find( '.qty:visible' );
+                    var val = parseFloat(qty.val());
+                    var min_val = 1;
+                }
+                else{
+                    var qty = $( this ).closest( '.wl-quantity-grouped-cal' ).find( '.qty:visible' );
+                    var val = !qty.val() ? 0 : parseFloat(qty.val());
+                    var min_val = 0;
+                }
+
+                var max  = parseFloat(qty.attr( 'max' ));
+                var min  = parseFloat(qty.attr( 'min' ));
+                var step = parseFloat(qty.attr( 'step' ));
+     
+                // Change the value if plus or minus
+                if ( $( this ).is( '.wl-qunatity-plus' ) ) {
+                    if ( max && ( max <= val ) ) {
+                        qty.val( max );
+                    } 
+                    else{
+                        qty.val( val + step );
+                    }
+                } 
+                else {
+                    if ( min && ( min >= val ) ) {
+                        qty.val( min );
+                    } 
+                    else if ( val > min_val ) {
+                        qty.val( val - step );
+                    }
+                }
+                 
+            });
+
+        },
+
 
     };
 
@@ -246,6 +292,10 @@
 
         $("[class*='woolentorblock-'] .htwoolentor-faq").each(function(){
             WooLentorBlocks.initAccordion( $(this) );
+        });
+
+        $("[class*='woolentorblock-'].woolentor-product-addtocart").each(function(){
+            WooLentorBlocks.quantityIncreaseDescrease( $(this) );
         });
 
         /**

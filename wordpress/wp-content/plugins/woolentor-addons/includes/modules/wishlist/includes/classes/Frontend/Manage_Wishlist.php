@@ -255,7 +255,7 @@ class Manage_Wishlist {
      * @param  integer $offset
      * @return [array]
      */
-    public function get_wishlist_products( $per_page = 20, $offset = 0 ){
+    public function get_wishlist_products( $per_page = 50, $offset = 0 ){
 
         if( is_user_logged_in() ){
             $args = [

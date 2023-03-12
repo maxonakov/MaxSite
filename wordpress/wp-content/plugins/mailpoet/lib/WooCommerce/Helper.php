@@ -196,14 +196,30 @@ class Helper {
     ]);
 
     return array_map(function(\WP_Post $post): array {
+      $discountType = $this->wp->getPostMeta($post->ID, 'discount_type', true);
       return [
         'id' => $post->ID,
         'text' => $post->post_title, // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
+        'excerpt' => $post->post_excerpt, // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
+        'discountType' => $discountType,
       ];
     }, $couponPosts);
   }
 
   public function wcGetPriceDecimalSeparator() {
     return wc_get_price_decimal_separator();
+  }
+
+  public function getLatestCoupon(): ?string {
+    $coupons = $this->wp->getPosts([
+      'numberposts' => 1,
+      'orderby' => 'name',
+      'order' => 'desc',
+      'post_type' => 'shop_coupon',
+      'post_status' => 'publish',
+    ]);
+    $coupon = reset($coupons);
+
+    return $coupon ? $coupon->post_title : null; // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
   }
 }

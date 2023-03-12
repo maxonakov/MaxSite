@@ -1452,6 +1452,15 @@ function woolentor_get_image_size() {
 }
 
 /**
+ * Get Themes
+ *
+ * @return boolean
+ */
+function woolentor_get_theme_byname( $name ){
+    $current_theme = wp_get_theme( $name );
+    return $current_theme->exists();
+}
+/**
  * Get the directory name of the current theme regardless of the child theme.
  * 
  * @return The directory name of the theme's "stylesheet" files, inside the theme root.

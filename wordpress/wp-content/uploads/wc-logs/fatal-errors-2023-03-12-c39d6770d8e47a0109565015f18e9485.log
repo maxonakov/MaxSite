@@ -1,0 +1,2 @@
+2023-03-12T07:58:21+00:00 CRITICAL Out of memory (allocated 79691776) (tried to allocate 20480 bytes) in C:\xampp\htdocs\wordpress\wp-content\plugins\mailpoet\vendor-prefixed\doctrine\orm\lib\Doctrine\ORM\Persisters\Entity\BasicEntityPersister.php on line 848
+

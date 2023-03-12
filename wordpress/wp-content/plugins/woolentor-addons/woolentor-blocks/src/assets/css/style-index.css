@@ -27,7 +27,10 @@
 .woolentor-text-align-center{
     text-align: center !important;
 }
-[class*="woolentor"] a{
+/* [class*="woolentor"] a{
+    text-decoration: none !important;
+} */
+[class*="woolentorblock-"] a,.block-editor__container[class*="woocommerce"] {
     text-decoration: none !important;
 }
 
@@ -410,6 +413,11 @@
 }
 .thumbnails-tab-position-bottom.wlpro-product-thumbnails ul.woolentor-thumbanis-image,.thumbnails-tab-position-top.wlpro-product-thumbnails ul.woolentor-thumbanis-image{
     width: 100%;
+}
+
+/* Product Add to cart Button */
+.wl-nonequantity-txt.wl-addto-cart form.cart .wl-quantity-wrap .wl-quantity-cal {
+    margin-left: 0 !important;
 }
 
 /*
