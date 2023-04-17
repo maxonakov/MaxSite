@@ -1,4 +1,0 @@
-2023-03-16T14:02:51+00:00 CRITICAL Out of memory (allocated 88080384) (tried to allocate 32768 bytes) in C:\xampp\htdocs\wordpress\wp-content\plugins\woo-gutenberg-products-block\src\AssetsController.php on line 333
-
-2023-03-16T14:02:51+00:00 CRITICAL Out of memory (allocated 90177536) (tried to allocate 32768 bytes) in C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\src\Admin\API\Reports\Customers\DataStore.php on line 331
-
