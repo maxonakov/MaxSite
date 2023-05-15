@@ -1,0 +1,8 @@
+2023-05-15T09:28:17+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-content\plugins\google-listings-and-ads\src\DB\Table\AttributeMappingRulesTable.php on line 8
+
+2023-05-15T09:28:24+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-content\plugins\authorizer\vendor\composer\ClassLoader.php on line 431
+
+2023-05-15T09:31:21+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\class-wpdb.php on line 2187
+
+2023-05-15T09:32:06+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-includes\class-wpdb.php on line 2187
+
