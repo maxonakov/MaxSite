@@ -1,0 +1,12 @@
+/*
+!wp-content
+!.gitignore
+wp-content/*
+
+!wp-content/plugins
+wp-content/plugins/*
+!wp-content/plugins/my-plugin
+
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/my-theme
